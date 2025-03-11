@@ -501,6 +501,31 @@ RC Table::delete_entry_of_indexes(const char *record, const RID &rid, bool error
   }
   return rc;
 }
+RC Table::drop(const char *base_dir,const char *table_name){
+  RC rc = sync();
+  if(rc != RC::SUCCESS) return rc;
+  std::string table_file_path = table_meta_file(base_dir,table_name);
+  if(unlink(table_file_path.c_str()) != 0){
+    LOG_ERROR("Failed to remove data file=%d",table_file_path.c_str(),errno);
+    return RC::IOERR_CLOSE;
+  }
+   std::string data_file = table_data_file(base_dir,table_name);
+   if(unlink(data_file.c_str())!= 0){
+    LOG_ERROR("Failed to remove data file%s,erro=%d",data_file.c_str(),errno);
+    return RC::IOERR_CLOSE;
+   }
+  const int index_num = table_meta_.index_num();
+  for(int i = 0;i < index_num;i++){
+    ((BplusTreeIndex*)indexes_[i])->close();
+    const IndexMeta* index_meta = table_meta_.index(i);
+    std::string index_file = table_index_file(base_dir_.c_str(),table_name,index_meta->name());
+    if(unlink(index_file.c_str()) != 0){
+      LOG_ERROR("Failed to remove index file=%s,errno=%d",index_file.c_str(),errno);
+      return RC::IOERR_CLOSE;
+    }
+  }
+  return RC::SUCCESS;
+}
 
 Index *Table::find_index(const char *index_name) const
 {

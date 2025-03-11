@@ -4,7 +4,7 @@
 		{
 			"FIELD_id" : 0,
 			"len" : 4,
-			"name" : "ide",
+			"name" : "a",
 			"offset" : 0,
 			"type" : "ints",
 			"visible" : true
@@ -12,7 +12,7 @@
 		{
 			"FIELD_id" : 1,
 			"len" : 4,
-			"name" : "grade",
+			"name" : "b",
 			"offset" : 4,
 			"type" : "ints",
 			"visible" : true
@@ -20,6 +20,6 @@
 	],
 	"indexes" : null,
 	"storage_format" : 1,
-	"table_id" : 1,
-	"table_name" : "tt"
+	"table_id" : 2,
+	"table_name" : "nt"
 }

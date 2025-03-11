@@ -464,6 +464,7 @@ public:
   RC create(LogHandler &log_handler, DiskBufferPool &buffer_pool, AttrType attr_type, int attr_length,
       int internal_max_size = -1, int leaf_max_size = -1);
 
+
   /**
    * @brief 打开一个B+树
    * @param log_handler 记录日志
@@ -477,7 +478,7 @@ public:
    * 关闭句柄indexHandle对应的索引文件
    */
   RC close();
-
+  RC drop();
   /**
    * @brief 此函数向IndexHandle对应的索引中插入一个索引项。
    * @details 参数user_key指向要插入的属性值，参数rid标识该索引项对应的元组，

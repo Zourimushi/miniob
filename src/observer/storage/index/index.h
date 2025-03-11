@@ -52,7 +52,6 @@ public:
   virtual bool is_vector_index() { return false; }
 
   const IndexMeta &index_meta() const { return index_meta_; }
-
   /**
    * @brief 插入一条数据
    *
