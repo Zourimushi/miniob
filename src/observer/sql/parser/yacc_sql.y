@@ -86,6 +86,7 @@ UnboundAggregateExpr *create_aggregate_expression(const char *aggregate_name,
         TRX_COMMIT
         TRX_ROLLBACK
         INT_T
+        DATE_T
         STRING_T
         FLOAT_T
         VECTOR_T
@@ -135,6 +136,7 @@ UnboundAggregateExpr *create_aggregate_expression(const char *aggregate_name,
 %token <number> NUMBER
 %token <floats> FLOAT
 %token <cstring> ID
+%token <cstring> DATE_S
 %token <cstring> SSS
 //非终结符
 
@@ -349,7 +351,8 @@ number:
 type:
     INT_T      { $$ = static_cast<int>(AttrType::INTS); }
     | STRING_T { $$ = static_cast<int>(AttrType::CHARS); }
-    | FLOAT_T  { $$ = static_cast<int>(AttrType::FLOATS); }
+    | FLOAT_T  { $$ = static_cast<int>(AttrType::FLOATS); } 
+    | DATE_T   { $$ = static_cast<int>(AttrType::DATES); }
     | VECTOR_T { $$ = static_cast<int>(AttrType::VECTORS); }
     ;
 insert_stmt:        /*insert   语句的语法解析树*/
@@ -390,6 +393,16 @@ value:
     |FLOAT {
       $$ = new Value((float)$1);
       @$ = @1;
+    }
+    |DATE_S {
+      char *tmp = common::substr($1, 1, strlen($1)-2);
+      int year, month, day;
+      sscanf(tmp, "%d-%d-%d", &year, &month, &day);
+      //转换为int类型
+      int date_num = year * 10000 + month * 100 + day;
+      $$ = new Value(date_num);
+      free(tmp);
+      free($1);
     }
     |SSS {
       char *tmp = common::substr($1,1,strlen($1)-2);

@@ -14,6 +14,7 @@ See the Mulan PSL v2 for more details. */
 
 #include "sql/stmt/filter_stmt.h"
 #include "common/lang/string.h"
+#include "common/type/date_type.h"
 #include "common/log/log.h"
 #include "common/sys/rc.h"
 #include "storage/db/db.h"
@@ -38,6 +39,25 @@ RC FilterStmt::create(Db *db, Table *default_table, unordered_map<string, Table 
     FilterUnit *filter_unit = nullptr;
 
     rc = create_filter_unit(db, default_table, tables, conditions[i], filter_unit);
+
+    // 检测左右DATE类型值合法性
+    if (conditions[i].left_is_attr) {
+      if (conditions[i].left_value.attr_type() == AttrType::DATES) {
+        int date = conditions[i].left_value.get_date();
+        if (DateType::check_date(date) == false) {
+          return RC::INVALID_ARGUMENT;
+        }
+      }
+    }
+    if (conditions[i].right_is_attr) {
+      if (conditions[i].right_value.attr_type() == AttrType::DATES) {
+        int date = conditions[i].right_value.get_date();
+        if (DateType::check_date(date) == false) {
+          return RC::INVALID_ARGUMENT;
+        }
+      }
+    }
+    
     if (rc != RC::SUCCESS) {
       delete tmp_stmt;
       LOG_WARN("failed to create filter unit. condition index=%d", i);

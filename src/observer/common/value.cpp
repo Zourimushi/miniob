@@ -12,6 +12,7 @@ See the Mulan PSL v2 for more details. */
 // Created by WangYunlai on 2023/06/28.
 //
 
+#include <iomanip>
 #include "common/value.h"
 
 #include "common/lang/comparator.h"
@@ -25,6 +26,8 @@ Value::Value(int val) { set_int(val); }
 Value::Value(float val) { set_float(val); }
 
 Value::Value(bool val) { set_boolean(val); }
+
+Value::Value(Date val) { set_date(val); }
 
 Value::Value(const char *s, int len /*= 0*/) { set_string(s, len); }
 
@@ -113,6 +116,10 @@ void Value::set_data(char *data, int length)
     case AttrType::CHARS: {
       set_string(data, length);
     } break;
+    case AttrType::DATES: {
+      value_.int_value_ = *(Date *)data;
+      length_           = length;
+    } break;
     case AttrType::INTS: {
       value_.int_value_ = *(int *)data;
       length_           = length;
@@ -153,6 +160,13 @@ void Value::set_boolean(bool val)
   value_.bool_value_ = val;
   length_            = sizeof(val);
 }
+void Value::set_date(Date val)
+{
+  reset();
+  attr_type_ = AttrType::DATES;
+  value_.date_value_ = val;
+  length_ = sizeof(val);
+}
 
 void Value::set_string(const char *s, int len /*= 0*/)
 {
@@ -180,6 +194,9 @@ void Value::set_value(const Value &value)
   switch (value.attr_type_) {
     case AttrType::INTS: {
       set_int(value.get_int());
+    } break;
+    case AttrType::DATES: {
+      set_date(value.get_date());
     } break;
     case AttrType::FLOATS: {
       set_float(value.get_float());
@@ -229,7 +246,10 @@ string Value::to_string() const
   return res;
 }
 
-int Value::compare(const Value &other) const { return DataType::type_instance(this->attr_type_)->compare(*this, other); }
+int Value::compare(const Value &other) const
+{
+  return DataType::type_instance(this->attr_type_)->compare(*this, other);
+}
 
 int Value::get_int() const
 {
@@ -242,6 +262,10 @@ int Value::get_int() const
         return 0;
       }
     }
+    case AttrType::DATES: {
+      return (int)(value_.int_value_);
+    } break;
+
     case AttrType::INTS: {
       return value_.int_value_;
     }
@@ -270,6 +294,9 @@ float Value::get_float() const
         return 0.0;
       }
     } break;
+    case AttrType::DATES: {
+      return float(value_.int_value_);
+    } break;
     case AttrType::INTS: {
       return float(value_.int_value_);
     } break;
@@ -285,6 +312,23 @@ float Value::get_float() const
     }
   }
   return 0;
+}
+Date Value::get_date() const
+{
+  switch (attr_type_) {
+    case AttrType::CHARS: {
+      Value tmp;
+      Value::cast_to(*this, AttrType::DATES, tmp);
+      return tmp.get_int();
+    } break;
+    case AttrType::DATES: {
+      return value_.date_value_;
+    }
+    default: {
+      LOG_WARN("unknown data type. type=%d", attr_type_);
+      return INT32_MAX;
+    }
+  }
 }
 
 string Value::get_string() const { return this->to_string(); }
@@ -309,6 +353,9 @@ bool Value::get_boolean() const
         LOG_TRACE("failed to convert string to float or integer. s=%s, ex=%s", value_.pointer_value_, ex.what());
         return value_.pointer_value_ != nullptr;
       }
+    } break;
+    case AttrType::DATES: {
+      return value_.int_value_;
     } break;
     case AttrType::INTS: {
       return value_.int_value_ != 0;

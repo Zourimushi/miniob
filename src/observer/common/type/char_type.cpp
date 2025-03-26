@@ -29,6 +29,12 @@ RC CharType::set_value_from_str(Value &val, const string &data) const
 RC CharType::cast_to(const Value &val, AttrType type, Value &result) const
 {
   switch (type) {
+    case AttrType::DATES: {
+      Value tmp;
+      tmp.set_date(0);
+      string data = val.get_string();
+      DataType::type_instance(val.attr_type())->set_value_from_str(tmp, data);
+    } break;
     default: return RC::UNIMPLEMENTED;
   }
   return RC::SUCCESS;

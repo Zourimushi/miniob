@@ -1,0 +1,17 @@
+{
+	"fields" : 
+	[
+		{
+			"FIELD_id" : 0,
+			"len" : 4,
+			"name" : "d",
+			"offset" : 0,
+			"type" : "dates",
+			"visible" : true
+		}
+	],
+	"indexes" : null,
+	"storage_format" : 1,
+	"table_id" : 5,
+	"table_name" : "t5"
+}

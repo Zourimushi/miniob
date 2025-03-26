@@ -1,0 +1,52 @@
+[2025-03-20 11:13:49.403509 pid:1652 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=14): drop table t3
+[2025-03-20 11:14:08.256941 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: sync@table.cpp:565] >> Sync table over. table=t3
+[2025-03-20 11:14:42.628338 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: clear_pages@double_write_buffer.cpp:210] >> clear pages in double write buffer. file name=miniob/db/sys/t3.data, page count=1
+[2025-03-20 11:14:42.629365 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: close_file@disk_buffer_pool.cpp:307] >> Successfully close file 9:miniob/db/sys/t3.data.
+[2025-03-20 11:14:42.629930 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: ~DiskBufferPool@disk_buffer_pool.cpp:226] >> disk buffer pool exit
+[2025-03-20 11:14:42.630067 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: ~Table@table.cpp:52] >> Table has been closed: t3
+[2025-03-20 11:14:42.824428 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: drop_table@db.cpp:178] >> drop table success. table name=t3
+[2025-03-20 11:14:43.988888 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: sync@table.cpp:565] >> Sync table over. table=t4
+[2025-03-20 11:14:43.989059 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:t4.
+[2025-03-20 11:14:43.989285 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: sync@table.cpp:565] >> Sync table over. table=nt
+[2025-03-20 11:14:43.989358 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:nt.
+[2025-03-20 11:14:43.989647 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: sync@table.cpp:565] >> Sync table over. table=tasdasda
+[2025-03-20 11:14:43.989708 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:tasdasda.
+[2025-03-20 11:14:43.994175 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: sync@db.cpp:266] >> double write buffer flush pages ret=SUCCESS
+[2025-03-20 11:14:43.995039 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: flush_meta@db.cpp:399] >> Successfully write db meta file. db=sys, file=miniob/db/sys/sys.db.tmp, check_point_lsn=0
+[2025-03-20 11:14:43.995104 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: sync@db.cpp:285] >> Successfully sync db. db=sys
+[2025-03-20 11:14:43.995166 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: execute@command_executor.cpp:100] >> sync db after ddl. rc=0
+[2025-03-20 11:14:43.996462 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-03-20 11:20:38.923421 pid:1652 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=12): show tables
+[2025-03-20 11:20:39.686706 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-03-20 11:20:52.987444 pid:1652 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=14): drop table t4
+[2025-03-20 11:20:57.725101 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: sync@table.cpp:565] >> Sync table over. table=t4
+[2025-03-20 11:20:57.729232 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: clear_pages@double_write_buffer.cpp:210] >> clear pages in double write buffer. file name=miniob/db/sys/t4.data, page count=1
+[2025-03-20 11:20:57.729600 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: close_file@disk_buffer_pool.cpp:307] >> Successfully close file 12:miniob/db/sys/t4.data.
+[2025-03-20 11:20:57.729985 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: ~DiskBufferPool@disk_buffer_pool.cpp:226] >> disk buffer pool exit
+[2025-03-20 11:20:57.730046 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: ~Table@table.cpp:52] >> Table has been closed: t4
+[2025-03-20 11:20:57.730090 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: drop_table@db.cpp:178] >> drop table success. table name=t4
+[2025-03-20 11:20:57.730962 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: sync@table.cpp:565] >> Sync table over. table=nt
+[2025-03-20 11:20:57.731026 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:nt.
+[2025-03-20 11:20:57.731439 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: sync@table.cpp:565] >> Sync table over. table=tasdasda
+[2025-03-20 11:20:57.731497 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:tasdasda.
+[2025-03-20 11:20:57.744050 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: sync@db.cpp:266] >> double write buffer flush pages ret=SUCCESS
+[2025-03-20 11:20:57.744852 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: flush_meta@db.cpp:399] >> Successfully write db meta file. db=sys, file=miniob/db/sys/sys.db.tmp, check_point_lsn=0
+[2025-03-20 11:20:57.744931 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: sync@db.cpp:285] >> Successfully sync db. db=sys
+[2025-03-20 11:20:57.745011 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: execute@command_executor.cpp:100] >> sync db after ddl. rc=0
+[2025-03-20 11:20:57.746347 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-03-20 11:21:07.285944 pid:1652 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=12): show tables
+[2025-03-20 11:21:08.817225 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-03-20 16:39:17.446944 pid:1652 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=5): quit
+[2025-03-20 16:39:17.453087 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-03-20 16:39:27.008132 pid:1652 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=5): quit
+[2025-03-20 16:39:27.009865 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-03-20 16:39:30.224060 pid:1652 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=5): quit
+[2025-03-20 16:39:30.225628 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-03-20 16:39:34.102880 pid:1652 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=5): cd..
+[2025-03-20 16:39:34.106470 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-03-20 16:39:38.057012 pid:1652 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=5): help
+[2025-03-20 16:39:41.403900 pid:1652 tid:fffff2e78100 ctx:50300000f1c0 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-03-20 16:39:52.283539 pid:1652 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:82] >> The peer has been closed 127.0.0.1:45190
+[2025-03-20 16:39:52.284519 pid:1652 tid:fffff2e78100 ctx:0 ERROR: operator()@one_thread_per_connection_thread_handler.cpp:98] >> handle error. rc = IOERR_CLOSE
+[2025-03-20 16:39:52.285240 pid:1652 tid:fffff2e78100 ctx:0 INFO: operator()@one_thread_per_connection_thread_handler.cpp:103] >> worker thread stop. communicator = 0x50b000000930
+[2025-03-20 16:39:52.290033 pid:1652 tid:fffff2e78100 ctx:0 INFO: close_connection@one_thread_per_connection_thread_handler.cpp:154] >> close connection. communicator = 0x50b000000930
