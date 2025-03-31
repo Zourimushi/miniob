@@ -23,4 +23,17 @@ RC UpdateStmt::create(Db *db, const UpdateSqlNode &update, Stmt *&stmt)
   // TODO
   stmt = nullptr;
   return RC::INTERNAL;
+
+   
+  // 合法性判断
+  switch(update.value.attr_type()) {
+    case AttrType::DATES: {
+      if(!DateType::check_date(&update.value)) {
+        LOG_WARN("not a valid date%u",update.value.get_int());
+        return RC::INVALID_ARGUMENT;
+      }
+    } break;
+    default: break;
+  }
+  // 类型是否相等
 }

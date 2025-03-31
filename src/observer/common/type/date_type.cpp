@@ -13,7 +13,7 @@ int DateType::compare(const Value &left, const Value &right) const
   ASSERT(left.attr_type() == AttrType::DATES && right.attr_type() == AttrType::DATES, "not type DATES");
   int left_val  = left.get_int();
   int right_val = right.get_int();
-  return common::compare_float((void *)&left_val, (void *)&right_val);
+  return common::compare_int((void *)&left_val, (void *)&right_val);
 }
 
 RC DateType::cast_to(const Value &val, AttrType type, Value &result) const { return RC::INVALID_ARGUMENT; }

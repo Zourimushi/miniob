@@ -355,7 +355,7 @@ bool Value::get_boolean() const
       }
     } break;
     case AttrType::DATES: {
-      return value_.int_value_;
+      return value_.date_value_;
     } break;
     case AttrType::INTS: {
       return value_.int_value_ != 0;

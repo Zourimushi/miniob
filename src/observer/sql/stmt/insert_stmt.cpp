@@ -36,6 +36,7 @@ RC InsertStmt::create(Db *db, const InsertSqlNode &inserts, Stmt *&stmt)
     LOG_WARN("no such table. db=%s, table_name=%s", db->name(), table_name);
     return RC::SCHEMA_TABLE_NOT_EXIST;
   }
+ 
 
   // check the fields number
   const Value     *values     = inserts.values.data();
@@ -46,6 +47,24 @@ RC InsertStmt::create(Db *db, const InsertSqlNode &inserts, Stmt *&stmt)
     LOG_WARN("schema mismatch. value num=%d, field num in schema=%d", value_num, field_num);
     return RC::SCHEMA_FIELD_MISSING;
   }
+
+  auto filed_metas = table_meta.field_metas();
+  // 合法性判断
+  for (int i=0;i<filed_metas->size();i++) {
+    auto &filed = (*filed_metas)[i];
+    auto &value = values[i];
+    switch (filed.type())
+    {
+      case AttrType::DATES: {
+        if(!DateType::check_date(value.get_int())) {
+          LOG_WARN("not a valid date%u",value.get_int());
+          return RC::INVALID_ARGUMENT;
+        }
+      } break;
+      default: break;
+    }
+  }  
+
 
   // everything alright
   stmt = new InsertStmt(table, values, value_num);

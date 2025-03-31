@@ -90,6 +90,9 @@ public:
   {
     if (type == attr_type_) {
       return 0;
+    } else if(attr_type_!=AttrType::CHARS&&attr_type_!=AttrType::VECTORS&&
+      type!=AttrType::CHARS&&type!=AttrType::VECTORS) {
+      return 0;
     }
     return INT32_MAX;
   }
