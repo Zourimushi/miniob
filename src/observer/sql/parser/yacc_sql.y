@@ -136,6 +136,7 @@ UnboundAggregateExpr *create_aggregate_expression(const char *aggregate_name,
 %token <number> NUMBER
 %token <floats> FLOAT
 %token <cstring> ID
+%token <cstring> AGGREGATION
 %token <cstring> DATE_S
 %token <cstring> SSS
 //非终结符
@@ -155,6 +156,7 @@ UnboundAggregateExpr *create_aggregate_expression(const char *aggregate_name,
 %type <condition_list>      condition_list
 %type <cstring>             storage_format
 %type <relation_list>       rel_list
+%type <expression>          aggr_expr
 %type <expression>          expression
 %type <expression_list>     expression_list
 %type <expression_list>     group_by
@@ -529,8 +531,25 @@ expression:
     | '*' {
       $$ = new StarExpr();
     }
+    | aggr_expr {
+      $$ = $1;
+      $$->set_name(token_name(sql_string, &@$));
+    }
     // your code here
     ;
+aggr_expr:
+    AGGREGATION LBRACE expression_list RBRACE {
+      if($3->size()>1) {
+        $$ = new UnboundAggregateExpr("over_one_expr", nullptr);
+        delete $3;
+      }
+      else {
+        $$ = new UnboundAggregateExpr($1, (*$3)[0].release());
+      }
+    }
+    | AGGREGATION LBRACE RBRACE {
+      $$ = new UnboundAggregateExpr("no_expr", nullptr);
+    }
 
 rel_attr:
     ID {

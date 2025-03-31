@@ -434,6 +434,7 @@ public:
     AVG,
     MAX,
     MIN,
+    INVALID,
   };
 
 public:

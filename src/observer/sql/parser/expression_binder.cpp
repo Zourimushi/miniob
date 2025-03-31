@@ -87,7 +87,8 @@ RC ExpressionBinder::bind_expression(unique_ptr<Expression> &expr, vector<unique
     } break;
 
     case ExprType::AGGREGATION: {
-      ASSERT(false, "shouldn't be here");
+      //ASSERT(false, "shouldn't be here");
+      return bind_aggregate_expression(expr, bound_expressions);
     } break;
 
     default: {
@@ -381,6 +382,7 @@ RC check_aggregate_expression(AggregateExpr &expression)
     case AggregateExpr::Type::MIN: {
       // 任何类型都支持
     } break;
+    default: break;
   }
 
   // 子表达式中不能再包含聚合表达式
