@@ -400,7 +400,7 @@ value:
       sscanf(tmp, "%d-%d-%d", &year, &month, &day);
       //转换为int类型
       int date_num = year * 10000 + month * 100 + day;
-      $$ = new Value((DATA)date_num);
+      $$ = new Value((Date)date_num);
       free(tmp);
       free($1);
     }
