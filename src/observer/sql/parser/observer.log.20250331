@@ -142,3 +142,80 @@ Finish dump configuration
 [2025-03-31 13:30:14.081825 pid:75463 tid:fffff2e78100 ctx:0 ERROR: operator()@one_thread_per_connection_thread_handler.cpp:98] >> handle error. rc = IOERR_CLOSE
 [2025-03-31 13:30:14.082477 pid:75463 tid:fffff2e78100 ctx:0 INFO: operator()@one_thread_per_connection_thread_handler.cpp:103] >> worker thread stop. communicator = 0x50b000000a90
 [2025-03-31 13:30:14.084176 pid:75463 tid:fffff2e78100 ctx:0 INFO: close_connection@one_thread_per_connection_thread_handler.cpp:154] >> close connection. communicator = 0x50b000000a90
+[2025-03-31 13:42:50.616828 pid:4201 tid:fffff7fea020 ctx:0 INFO: init@init.cpp:200] >> Output configuration 
+Begin dump configuration
+[]
+
+Finish dump configuration 
+
+[2025-03-31 13:42:50.617441 pid:4201 tid:fffff7fea020 ctx:0 WARN: create_db@default_handler.cpp:90] >> Db already exists: sys
+[2025-03-31 13:42:50.617753 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:128, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.617934 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:256, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.618093 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:384, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.618253 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:512, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.618396 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:640, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.618540 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:768, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.618678 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:896, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.618816 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:1024, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.618999 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:1152, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.619170 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:1280, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.619331 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:1408, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.619487 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:1536, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.619643 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:1664, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.619792 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:1792, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.619972 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:1920, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.620120 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:2048, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.620265 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:2176, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.620459 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:2304, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.620636 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:2432, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.620789 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:2560, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.620818 pid:4201 tid:fffff7fea020 ctx:0 INFO: init@mem_pool.h:191] >> Extend one pool, this->size:2560, item_num_per_pool:128, this->name:BufPool.
+[2025-03-31 13:42:50.620865 pid:4201 tid:fffff7fea020 ctx:0 INFO: BufferPoolManager@disk_buffer_pool.cpp:775] >> buffer pool manager init with memory size 20971520, page num: 2560, pool num: 20
+[2025-03-31 13:42:50.621110 pid:4201 tid:fffff7fea020 ctx:0 INFO: load_pages@double_write_buffer.cpp:287] >> double write buffer load pages done. page num=2
+[2025-03-31 13:42:50.621355 pid:4201 tid:fffff7fea020 ctx:0 INFO: init_meta@db.cpp:354] >> Successfully read db meta file. db=sys, file=miniob/db/sys/sys.db, check_point_lsn=0
+[2025-03-31 13:42:50.622380 pid:4201 tid:fffff7fea020 ctx:0 INFO: init@field_meta.cpp:57] >> Init a field with name=a
+[2025-03-31 13:42:50.622563 pid:4201 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:236] >> Successfully open buffer pool file miniob/db/sys/t3.data.
+[2025-03-31 13:42:50.622665 pid:4201 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:274] >> Successfully open miniob/db/sys/t3.data. file_desc=5, hdr_frame=0xfffff4ff1808, file header=pageCount:1, allocatedCount:1
+[2025-03-31 13:42:50.622738 pid:4201 tid:fffff7fea020 ctx:0 INFO: init_free_pages@record_manager.cpp:538] >> record file handler init free pages done. free page num=0, rc=SUCCESS
+[2025-03-31 13:42:50.622786 pid:4201 tid:fffff7fea020 ctx:0 INFO: init@record_manager.cpp:497] >> open record file handle done. rc=SUCCESS
+[2025-03-31 13:42:50.622844 pid:4201 tid:fffff7fea020 ctx:0 INFO: open_all_tables@db.cpp:234] >> Open table: t3, file: t3.table
+[2025-03-31 13:42:50.623311 pid:4201 tid:fffff7fea020 ctx:0 INFO: init@field_meta.cpp:57] >> Init a field with name=d
+[2025-03-31 13:42:50.623474 pid:4201 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:236] >> Successfully open buffer pool file miniob/db/sys/t5.data.
+[2025-03-31 13:42:50.623580 pid:4201 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:274] >> Successfully open miniob/db/sys/t5.data. file_desc=6, hdr_frame=0xfffff4ff38a0, file header=pageCount:1, allocatedCount:1
+[2025-03-31 13:42:50.623630 pid:4201 tid:fffff7fea020 ctx:0 INFO: init_free_pages@record_manager.cpp:538] >> record file handler init free pages done. free page num=0, rc=SUCCESS
+[2025-03-31 13:42:50.623673 pid:4201 tid:fffff7fea020 ctx:0 INFO: init@record_manager.cpp:497] >> open record file handle done. rc=SUCCESS
+[2025-03-31 13:42:50.623735 pid:4201 tid:fffff7fea020 ctx:0 INFO: open_all_tables@db.cpp:234] >> Open table: t5, file: t5.table
+[2025-03-31 13:42:50.624146 pid:4201 tid:fffff7fea020 ctx:0 INFO: init@field_meta.cpp:57] >> Init a field with name=id
+[2025-03-31 13:42:50.624186 pid:4201 tid:fffff7fea020 ctx:0 INFO: init@field_meta.cpp:57] >> Init a field with name=age
+[2025-03-31 13:42:50.624310 pid:4201 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:236] >> Successfully open buffer pool file miniob/db/sys/tasdasda.data.
+[2025-03-31 13:42:50.624387 pid:4201 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:274] >> Successfully open miniob/db/sys/tasdasda.data. file_desc=7, hdr_frame=0xfffff4ff5938, file header=pageCount:2, allocatedCount:2
+[2025-03-31 13:42:50.624675 pid:4201 tid:fffff7fea020 ctx:0 INFO: init_free_pages@record_manager.cpp:538] >> record file handler init free pages done. free page num=1, rc=SUCCESS
+[2025-03-31 13:42:50.624710 pid:4201 tid:fffff7fea020 ctx:0 INFO: init@record_manager.cpp:497] >> open record file handle done. rc=SUCCESS
+[2025-03-31 13:42:50.624756 pid:4201 tid:fffff7fea020 ctx:0 INFO: open_all_tables@db.cpp:234] >> Open table: tasdasda, file: tasdasda.table
+[2025-03-31 13:42:50.625093 pid:4201 tid:fffff7fea020 ctx:0 INFO: init@field_meta.cpp:57] >> Init a field with name=id
+[2025-03-31 13:42:50.625129 pid:4201 tid:fffff7fea020 ctx:0 INFO: init@field_meta.cpp:57] >> Init a field with name=u_date
+[2025-03-31 13:42:50.625336 pid:4201 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:236] >> Successfully open buffer pool file miniob/db/sys/date_table.data.
+[2025-03-31 13:42:50.625412 pid:4201 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:274] >> Successfully open miniob/db/sys/date_table.data. file_desc=8, hdr_frame=0xfffff4ff9a68, file header=pageCount:1, allocatedCount:1
+[2025-03-31 13:42:50.625458 pid:4201 tid:fffff7fea020 ctx:0 INFO: init_free_pages@record_manager.cpp:538] >> record file handler init free pages done. free page num=0, rc=SUCCESS
+[2025-03-31 13:42:50.625494 pid:4201 tid:fffff7fea020 ctx:0 INFO: init@record_manager.cpp:497] >> open record file handle done. rc=SUCCESS
+[2025-03-31 13:42:50.625629 pid:4201 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:236] >> Successfully open buffer pool file miniob/db/sys/date_table-index_id.index.
+[2025-03-31 13:42:50.625715 pid:4201 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:274] >> Successfully open miniob/db/sys/date_table-index_id.index. file_desc=9, hdr_frame=0xfffff4ffbb00, file header=pageCount:2, allocatedCount:2
+[2025-03-31 13:42:50.625849 pid:4201 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.cpp:96] >> Extend one pool, this->size:128, item_size:12, item_num_per_pool:128, this->name:b+tree.
+[2025-03-31 13:42:50.625890 pid:4201 tid:fffff7fea020 ctx:0 INFO: init@mem_pool.cpp:42] >> Extend one pool, this->size:128, item_size:12, item_num_per_pool:128, this->name:b+tree.
+[2025-03-31 13:42:50.625936 pid:4201 tid:fffff7fea020 ctx:0 INFO: open@bplus_tree.cpp:962] >> Successfully open index
+[2025-03-31 13:42:50.625996 pid:4201 tid:fffff7fea020 ctx:0 INFO: open@bplus_tree.cpp:923] >> open b+tree success. filename=miniob/db/sys/date_table-index_id.index
+[2025-03-31 13:42:50.626049 pid:4201 tid:fffff7fea020 ctx:0 INFO: open@bplus_tree_index.cpp:69] >> Successfully open index, file_name:miniob/db/sys/date_table-index_id.index, index:index_id, field:u_date
+[2025-03-31 13:42:50.626091 pid:4201 tid:fffff7fea020 ctx:0 INFO: open_all_tables@db.cpp:234] >> Open table: date_table, file: date_table.table
+[2025-03-31 13:42:50.626220 pid:4201 tid:fffff7fea020 ctx:0 INFO: init@field_meta.cpp:57] >> Init a field with name=a
+[2025-03-31 13:42:50.626257 pid:4201 tid:fffff7fea020 ctx:0 INFO: init@field_meta.cpp:57] >> Init a field with name=b
+[2025-03-31 13:42:50.626364 pid:4201 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:236] >> Successfully open buffer pool file miniob/db/sys/nt.data.
+[2025-03-31 13:42:50.626446 pid:4201 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:274] >> Successfully open miniob/db/sys/nt.data. file_desc=10, hdr_frame=0xfffff4fffc30, file header=pageCount:1, allocatedCount:1
+[2025-03-31 13:42:50.626490 pid:4201 tid:fffff7fea020 ctx:0 INFO: init_free_pages@record_manager.cpp:538] >> record file handler init free pages done. free page num=0, rc=SUCCESS
+[2025-03-31 13:42:50.626536 pid:4201 tid:fffff7fea020 ctx:0 INFO: init@record_manager.cpp:497] >> open record file handle done. rc=SUCCESS
+[2025-03-31 13:42:50.626581 pid:4201 tid:fffff7fea020 ctx:0 INFO: open_all_tables@db.cpp:234] >> Open table: nt, file: nt.table
+[2025-03-31 13:42:50.626631 pid:4201 tid:fffff7fea020 ctx:0 INFO: open_all_tables@db.cpp:237] >> All table have been opened. num=5
+[2025-03-31 13:42:50.691195 pid:4201 tid:fffff7fea020 ctx:0 INFO: recover@db.cpp:318] >> Successfully recover db. db=sys checkpoint_lsn=0
+[2025-03-31 13:42:50.691311 pid:4201 tid:fffff7fea020 ctx:0 INFO: init@default_handler.cpp:66] >> Default handler init with miniob success
+[2025-03-31 13:42:50.691363 pid:4201 tid:fffff7fea020 ctx:0 INFO: init@init.cpp:215] >> Successfully init utility
+[2025-03-31 13:42:50.691489 pid:4201 tid:fffff7fea020 ctx:0 INFO: start_tcp_server@server.cpp:192] >> Listen on port 6789
+[2025-03-31 13:42:50.691528 pid:4201 tid:fffff7fea020 ctx:0 INFO: start_tcp_server@server.cpp:195] >> Observer start success
