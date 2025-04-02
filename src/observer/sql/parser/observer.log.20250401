@@ -1,0 +1,411 @@
+[2025-04-01 08:44:42.346132 pid:61036 tid:fffff7fea020 ctx:0 INFO: init@init.cpp:200] >> Output configuration 
+Begin dump configuration
+[]
+
+Finish dump configuration 
+
+[2025-04-01 08:44:42.346661 pid:61036 tid:fffff7fea020 ctx:0 WARN: create_db@default_handler.cpp:90] >> Db already exists: sys
+[2025-04-01 08:44:42.346986 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:128, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.347135 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:256, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.347280 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:384, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.347424 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:512, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.347566 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:640, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.347708 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:768, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.347872 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:896, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.348029 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:1024, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.348166 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:1152, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.348309 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:1280, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.348445 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:1408, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.348580 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:1536, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.348716 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:1664, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.348855 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:1792, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.348995 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:1920, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.349113 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:2048, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.349252 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:2176, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.349395 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:2304, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.349537 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:2432, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.349681 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.h:244] >> Extend one pool, this->size:2560, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.349711 pid:61036 tid:fffff7fea020 ctx:0 INFO: init@mem_pool.h:191] >> Extend one pool, this->size:2560, item_num_per_pool:128, this->name:BufPool.
+[2025-04-01 08:44:42.349751 pid:61036 tid:fffff7fea020 ctx:0 INFO: BufferPoolManager@disk_buffer_pool.cpp:775] >> buffer pool manager init with memory size 20971520, page num: 2560, pool num: 20
+[2025-04-01 08:44:42.350901 pid:61036 tid:fffff7fea020 ctx:0 INFO: load_pages@double_write_buffer.cpp:287] >> double write buffer load pages done. page num=2
+[2025-04-01 08:44:42.351488 pid:61036 tid:fffff7fea020 ctx:0 INFO: init_meta@db.cpp:354] >> Successfully read db meta file. db=sys, file=miniob/db/sys/sys.db, check_point_lsn=0
+[2025-04-01 08:44:42.352469 pid:61036 tid:fffff7fea020 ctx:0 INFO: init@field_meta.cpp:57] >> Init a field with name=a
+[2025-04-01 08:44:42.352839 pid:61036 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:236] >> Successfully open buffer pool file miniob/db/sys/t3.data.
+[2025-04-01 08:44:42.353099 pid:61036 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:274] >> Successfully open miniob/db/sys/t3.data. file_desc=5, hdr_frame=0xfffff4ff1808, file header=pageCount:1, allocatedCount:1
+[2025-04-01 08:44:42.353173 pid:61036 tid:fffff7fea020 ctx:0 INFO: init_free_pages@record_manager.cpp:538] >> record file handler init free pages done. free page num=0, rc=SUCCESS
+[2025-04-01 08:44:42.353213 pid:61036 tid:fffff7fea020 ctx:0 INFO: init@record_manager.cpp:497] >> open record file handle done. rc=SUCCESS
+[2025-04-01 08:44:42.353262 pid:61036 tid:fffff7fea020 ctx:0 INFO: open_all_tables@db.cpp:234] >> Open table: t3, file: t3.table
+[2025-04-01 08:44:42.353688 pid:61036 tid:fffff7fea020 ctx:0 INFO: init@field_meta.cpp:57] >> Init a field with name=d
+[2025-04-01 08:44:42.353800 pid:61036 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:236] >> Successfully open buffer pool file miniob/db/sys/t5.data.
+[2025-04-01 08:44:42.354006 pid:61036 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:274] >> Successfully open miniob/db/sys/t5.data. file_desc=6, hdr_frame=0xfffff4ff38a0, file header=pageCount:1, allocatedCount:1
+[2025-04-01 08:44:42.354075 pid:61036 tid:fffff7fea020 ctx:0 INFO: init_free_pages@record_manager.cpp:538] >> record file handler init free pages done. free page num=0, rc=SUCCESS
+[2025-04-01 08:44:42.354123 pid:61036 tid:fffff7fea020 ctx:0 INFO: init@record_manager.cpp:497] >> open record file handle done. rc=SUCCESS
+[2025-04-01 08:44:42.354160 pid:61036 tid:fffff7fea020 ctx:0 INFO: open_all_tables@db.cpp:234] >> Open table: t5, file: t5.table
+[2025-04-01 08:44:42.354476 pid:61036 tid:fffff7fea020 ctx:0 INFO: init@field_meta.cpp:57] >> Init a field with name=id
+[2025-04-01 08:44:42.354509 pid:61036 tid:fffff7fea020 ctx:0 INFO: init@field_meta.cpp:57] >> Init a field with name=age
+[2025-04-01 08:44:42.354626 pid:61036 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:236] >> Successfully open buffer pool file miniob/db/sys/tasdasda.data.
+[2025-04-01 08:44:42.354896 pid:61036 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:274] >> Successfully open miniob/db/sys/tasdasda.data. file_desc=7, hdr_frame=0xfffff4ff5938, file header=pageCount:2, allocatedCount:2
+[2025-04-01 08:44:42.355136 pid:61036 tid:fffff7fea020 ctx:0 INFO: init_free_pages@record_manager.cpp:538] >> record file handler init free pages done. free page num=1, rc=SUCCESS
+[2025-04-01 08:44:42.355166 pid:61036 tid:fffff7fea020 ctx:0 INFO: init@record_manager.cpp:497] >> open record file handle done. rc=SUCCESS
+[2025-04-01 08:44:42.355215 pid:61036 tid:fffff7fea020 ctx:0 INFO: open_all_tables@db.cpp:234] >> Open table: tasdasda, file: tasdasda.table
+[2025-04-01 08:44:42.355511 pid:61036 tid:fffff7fea020 ctx:0 INFO: init@field_meta.cpp:57] >> Init a field with name=id
+[2025-04-01 08:44:42.355543 pid:61036 tid:fffff7fea020 ctx:0 INFO: init@field_meta.cpp:57] >> Init a field with name=u_date
+[2025-04-01 08:44:42.355739 pid:61036 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:236] >> Successfully open buffer pool file miniob/db/sys/date_table.data.
+[2025-04-01 08:44:42.355931 pid:61036 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:274] >> Successfully open miniob/db/sys/date_table.data. file_desc=8, hdr_frame=0xfffff4ff9a68, file header=pageCount:1, allocatedCount:1
+[2025-04-01 08:44:42.355979 pid:61036 tid:fffff7fea020 ctx:0 INFO: init_free_pages@record_manager.cpp:538] >> record file handler init free pages done. free page num=0, rc=SUCCESS
+[2025-04-01 08:44:42.356044 pid:61036 tid:fffff7fea020 ctx:0 INFO: init@record_manager.cpp:497] >> open record file handle done. rc=SUCCESS
+[2025-04-01 08:44:42.356221 pid:61036 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:236] >> Successfully open buffer pool file miniob/db/sys/date_table-index_id.index.
+[2025-04-01 08:44:42.356329 pid:61036 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:274] >> Successfully open miniob/db/sys/date_table-index_id.index. file_desc=9, hdr_frame=0xfffff4ffbb00, file header=pageCount:2, allocatedCount:2
+[2025-04-01 08:44:42.356437 pid:61036 tid:fffff7fea020 ctx:0 INFO: extend@mem_pool.cpp:96] >> Extend one pool, this->size:128, item_size:12, item_num_per_pool:128, this->name:b+tree.
+[2025-04-01 08:44:42.356596 pid:61036 tid:fffff7fea020 ctx:0 INFO: init@mem_pool.cpp:42] >> Extend one pool, this->size:128, item_size:12, item_num_per_pool:128, this->name:b+tree.
+[2025-04-01 08:44:42.356640 pid:61036 tid:fffff7fea020 ctx:0 INFO: open@bplus_tree.cpp:962] >> Successfully open index
+[2025-04-01 08:44:42.356668 pid:61036 tid:fffff7fea020 ctx:0 INFO: open@bplus_tree.cpp:923] >> open b+tree success. filename=miniob/db/sys/date_table-index_id.index
+[2025-04-01 08:44:42.356706 pid:61036 tid:fffff7fea020 ctx:0 INFO: open@bplus_tree_index.cpp:69] >> Successfully open index, file_name:miniob/db/sys/date_table-index_id.index, index:index_id, field:u_date
+[2025-04-01 08:44:42.356743 pid:61036 tid:fffff7fea020 ctx:0 INFO: open_all_tables@db.cpp:234] >> Open table: date_table, file: date_table.table
+[2025-04-01 08:44:42.357121 pid:61036 tid:fffff7fea020 ctx:0 INFO: init@field_meta.cpp:57] >> Init a field with name=a
+[2025-04-01 08:44:42.357156 pid:61036 tid:fffff7fea020 ctx:0 INFO: init@field_meta.cpp:57] >> Init a field with name=b
+[2025-04-01 08:44:42.357256 pid:61036 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:236] >> Successfully open buffer pool file miniob/db/sys/nt.data.
+[2025-04-01 08:44:42.357454 pid:61036 tid:fffff7fea020 ctx:0 INFO: open_file@disk_buffer_pool.cpp:274] >> Successfully open miniob/db/sys/nt.data. file_desc=10, hdr_frame=0xfffff4fffc30, file header=pageCount:1, allocatedCount:1
+[2025-04-01 08:44:42.357515 pid:61036 tid:fffff7fea020 ctx:0 INFO: init_free_pages@record_manager.cpp:538] >> record file handler init free pages done. free page num=0, rc=SUCCESS
+[2025-04-01 08:44:42.357602 pid:61036 tid:fffff7fea020 ctx:0 INFO: init@record_manager.cpp:497] >> open record file handle done. rc=SUCCESS
+[2025-04-01 08:44:42.357666 pid:61036 tid:fffff7fea020 ctx:0 INFO: open_all_tables@db.cpp:234] >> Open table: nt, file: nt.table
+[2025-04-01 08:44:42.357726 pid:61036 tid:fffff7fea020 ctx:0 INFO: open_all_tables@db.cpp:237] >> All table have been opened. num=5
+[2025-04-01 08:44:42.472414 pid:61036 tid:fffff7fea020 ctx:0 INFO: recover@db.cpp:318] >> Successfully recover db. db=sys checkpoint_lsn=0
+[2025-04-01 08:44:42.472522 pid:61036 tid:fffff7fea020 ctx:0 INFO: init@default_handler.cpp:66] >> Default handler init with miniob success
+[2025-04-01 08:44:42.472560 pid:61036 tid:fffff7fea020 ctx:0 INFO: init@init.cpp:215] >> Successfully init utility
+[2025-04-01 08:44:42.472631 pid:61036 tid:fffff7fea020 ctx:0 INFO: start_tcp_server@server.cpp:192] >> Listen on port 6789
+[2025-04-01 08:44:42.472662 pid:61036 tid:fffff7fea020 ctx:0 INFO: start_tcp_server@server.cpp:195] >> Observer start success
+[2025-04-01 08:46:00.019600 pid:61036 tid:fffff7fea020 ctx:0 INFO: accept@server.cpp:127] >> Accepted connection from 127.0.0.1:13477
+
+[2025-04-01 08:46:00.023073 pid:61036 tid:fffff2e78100 ctx:0 INFO: operator()@one_thread_per_connection_thread_handler.cpp:70] >> worker thread start. communicator = 0x50b000000b40
+[2025-04-01 08:46:08.125331 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=12): show tables
+[2025-04-01 08:46:08.129288 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 08:46:22.176569 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=18): select * tasdasda
+[2025-04-01 08:46:22.183128 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 08:46:29.278873 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=23): select * from tasdasda
+[2025-04-01 08:46:29.281794 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 08:46:29.283865 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 08:47:38.480127 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=91): CREATE TABLE aggregation_func(id int, num int, price float, addr char(4), birthday date);
+
+[2025-04-01 08:47:44.525559 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: create@table.cpp:67] >> Begin to create table miniob/db/sys:aggregation_func
+[2025-04-01 08:47:44.528979 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: init@field_meta.cpp:57] >> Init a field with name=id
+[2025-04-01 08:47:44.529170 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: init@field_meta.cpp:57] >> Init a field with name=num
+[2025-04-01 08:47:44.529219 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: init@field_meta.cpp:57] >> Init a field with name=price
+[2025-04-01 08:47:44.529277 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: init@field_meta.cpp:57] >> Init a field with name=addr
+[2025-04-01 08:47:44.529315 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: init@field_meta.cpp:57] >> Init a field with name=birthday
+[2025-04-01 08:47:44.529362 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: init@table_meta.cpp:97] >> Sussessfully initialized table meta. table id=7, name=aggregation_func
+[2025-04-01 08:47:44.531019 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: create_file@disk_buffer_pool.cpp:837] >> Successfully create miniob/db/sys/aggregation_func.data.
+[2025-04-01 08:47:44.531702 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: open_file@disk_buffer_pool.cpp:236] >> Successfully open buffer pool file miniob/db/sys/aggregation_func.data.
+[2025-04-01 08:47:44.532113 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: open_file@disk_buffer_pool.cpp:274] >> Successfully open miniob/db/sys/aggregation_func.data. file_desc=13, hdr_frame=0xfffff5001cc8, file header=pageCount:1, allocatedCount:1
+[2025-04-01 08:47:44.532881 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: init_free_pages@record_manager.cpp:538] >> record file handler init free pages done. free page num=0, rc=SUCCESS
+[2025-04-01 08:47:44.532945 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: init@record_manager.cpp:497] >> open record file handle done. rc=SUCCESS
+[2025-04-01 08:47:44.532986 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: create@table.cpp:126] >> Successfully create table miniob/db/sys:aggregation_func
+[2025-04-01 08:47:44.533048 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: create_table@db.cpp:158] >> Create table success. table name=aggregation_func, table_id:7
+[2025-04-01 08:47:44.533578 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=aggregation_func
+[2025-04-01 08:47:44.533625 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:aggregation_func.
+[2025-04-01 08:47:44.534134 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=date_table
+[2025-04-01 08:47:44.534223 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:date_table.
+[2025-04-01 08:47:44.534406 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=nt
+[2025-04-01 08:47:44.534473 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:nt.
+[2025-04-01 08:47:44.534794 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=tasdasda
+[2025-04-01 08:47:44.534876 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:tasdasda.
+[2025-04-01 08:47:44.535029 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=t5
+[2025-04-01 08:47:44.535120 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:t5.
+[2025-04-01 08:47:44.535307 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=t3
+[2025-04-01 08:47:44.535372 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:t3.
+[2025-04-01 08:47:45.558156 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:266] >> double write buffer flush pages ret=SUCCESS
+[2025-04-01 08:47:45.559186 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: flush_meta@db.cpp:399] >> Successfully write db meta file. db=sys, file=miniob/db/sys/sys.db.tmp, check_point_lsn=0
+[2025-04-01 08:47:45.559291 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:285] >> Successfully sync db. db=sys
+[2025-04-01 08:47:45.559326 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: execute@command_executor.cpp:100] >> sync db after ddl. rc=0
+[2025-04-01 08:47:45.559807 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 08:48:03.984777 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=71): INSERT INTO aggregation_func VALUES (80, 1, 1.0, '14', '2001-02-26');
+
+[2025-04-01 08:48:03.997577 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 08:48:03.998378 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: allocate_page@disk_buffer_pool.cpp:408] >> allocate new page by extending bufferpool. buffer_pool_id=9, pageNum=1, pin=1
+[2025-04-01 08:48:03.999376 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 08:48:11.696416 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=71): INSERT INTO aggregation_func VALUES (90, 1, 6.0, 'Z3', '2035-10-31');
+
+[2025-04-01 08:48:11.699194 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 08:48:11.700006 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 08:48:24.181430 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=106): SELECT avg(id),max(num),min(addr),count(birthday) FROM aggregation_func WHERE aggregation_func.price>15;
+
+[2025-04-01 08:48:24.190333 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 08:48:24.192116 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 08:48:24.193079 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 08:48:24.194004 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 08:50:57.534908 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=73): SELECT avg(id),max(num),min(addr),count(birthday) FROM aggregation_func 
+[2025-04-01 08:50:57.537029 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 08:50:57.538309 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 08:52:57.906467 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=43): SELECT * FROM tasdasda WHERE tasdasda.id>2
+[2025-04-01 08:52:57.914400 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 08:52:57.916805 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 08:53:11.632696 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=24): SELECT * FROM tasdasda 
+[2025-04-01 08:53:11.634032 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 08:53:11.637145 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 08:53:25.495928 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=31): SELECT * FROM aggregation_func
+[2025-04-01 08:53:25.496262 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 08:53:25.497218 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 08:53:52.577331 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=63): SELECT * FROM aggregation_func WHERE aggregation_func.price>15
+[2025-04-01 08:53:52.579435 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 08:53:52.581184 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 08:53:52.581645 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 08:53:52.582165 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 08:55:00.671635 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=60): SELECT * FROM aggregation_func WHERE aggregation_func.id>15
+[2025-04-01 08:55:00.673773 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 08:55:00.676408 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 08:55:04.924121 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=61): SELECT * FROM aggregation_func WHERE aggregation_func.id>100
+[2025-04-01 08:55:04.925453 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 08:55:04.926367 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 09:02:59.983194 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=62): SELECT * FROM aggregation_func WHERE aggregation_func.num>100
+[2025-04-01 09:02:59.988731 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 09:03:00.000023 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 09:03:43.758029 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=32): CREATE TABLE t4(i int, f float)
+[2025-04-01 09:03:51.903793 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: create@table.cpp:67] >> Begin to create table miniob/db/sys:t4
+[2025-04-01 09:03:51.906206 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: init@field_meta.cpp:57] >> Init a field with name=i
+[2025-04-01 09:03:51.906426 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: init@field_meta.cpp:57] >> Init a field with name=f
+[2025-04-01 09:03:51.906683 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: init@table_meta.cpp:97] >> Sussessfully initialized table meta. table id=8, name=t4
+[2025-04-01 09:03:51.908027 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: create_file@disk_buffer_pool.cpp:837] >> Successfully create miniob/db/sys/t4.data.
+[2025-04-01 09:03:51.908260 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: open_file@disk_buffer_pool.cpp:236] >> Successfully open buffer pool file miniob/db/sys/t4.data.
+[2025-04-01 09:03:51.908527 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: open_file@disk_buffer_pool.cpp:274] >> Successfully open miniob/db/sys/t4.data. file_desc=15, hdr_frame=0xfffff5005df8, file header=pageCount:1, allocatedCount:1
+[2025-04-01 09:03:51.908664 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: init_free_pages@record_manager.cpp:538] >> record file handler init free pages done. free page num=0, rc=SUCCESS
+[2025-04-01 09:03:51.908726 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: init@record_manager.cpp:497] >> open record file handle done. rc=SUCCESS
+[2025-04-01 09:03:51.908824 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: create@table.cpp:126] >> Successfully create table miniob/db/sys:t4
+[2025-04-01 09:03:51.908907 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: create_table@db.cpp:158] >> Create table success. table name=t4, table_id:8
+[2025-04-01 09:03:51.909320 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=t4
+[2025-04-01 09:03:51.909534 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:t4.
+[2025-04-01 09:03:51.909871 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=aggregation_func
+[2025-04-01 09:03:51.909939 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:aggregation_func.
+[2025-04-01 09:03:51.911181 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=date_table
+[2025-04-01 09:03:51.911329 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:date_table.
+[2025-04-01 09:03:51.912129 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=nt
+[2025-04-01 09:03:51.912371 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:nt.
+[2025-04-01 09:03:51.913729 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=tasdasda
+[2025-04-01 09:03:51.913956 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:tasdasda.
+[2025-04-01 09:03:51.914492 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=t5
+[2025-04-01 09:03:51.914680 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:t5.
+[2025-04-01 09:03:51.915252 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=t3
+[2025-04-01 09:03:51.915350 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:t3.
+[2025-04-01 09:03:51.924050 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:266] >> double write buffer flush pages ret=SUCCESS
+[2025-04-01 09:03:51.926364 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: flush_meta@db.cpp:399] >> Successfully write db meta file. db=sys, file=miniob/db/sys/sys.db.tmp, check_point_lsn=0
+[2025-04-01 09:03:51.926565 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:285] >> Successfully sync db. db=sys
+[2025-04-01 09:03:51.926699 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: execute@command_executor.cpp:100] >> sync db after ddl. rc=0
+[2025-04-01 09:03:51.926875 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 09:04:17.248926 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=32): INSERT INTO t4 VALUES (80, 3.0)
+[2025-04-01 09:04:17.269149 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 09:04:17.272172 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: allocate_page@disk_buffer_pool.cpp:408] >> allocate new page by extending bufferpool. buffer_pool_id=10, pageNum=1, pin=1
+[2025-04-01 09:04:17.273043 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 09:04:25.906797 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=30): INSERT INTO t4 VALUES (90, 7)
+[2025-04-01 09:04:25.908225 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 09:04:25.908778 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 2, target 3
+[2025-04-01 09:04:25.912585 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 09:04:35.946787 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=17): SELECT * FROM t4
+[2025-04-01 09:04:35.950430 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 09:04:35.958457 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 09:04:57.716804 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=34): INSERT INTO t4 VALUES (100, 15.3)
+[2025-04-01 09:04:57.717897 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 09:04:57.718293 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 09:05:02.477354 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=17): SELECT * FROM t4
+[2025-04-01 09:05:02.480878 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 09:05:02.482680 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 09:05:19.439509 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=30): SELECT * FROM t4 WHERE t4.f>4
+[2025-04-01 09:05:19.441673 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 09:05:19.444579 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 09:05:19.445271 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 09:05:19.445756 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 09:05:19.446266 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 09:09:55.356168 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=32): SELECT * FROM t4 WHERE t4.f>4.0
+[2025-04-01 09:09:55.359584 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 09:09:59.101678 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 09:10:40.004922 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=107): SELECT avg(id),max(num),min(addr),count(birthday) FROM aggregation_func WHERE aggregation_func.price>15.0;
+[2025-04-01 09:10:40.018605 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 09:10:43.069232 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 09:22:46.094588 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=32): SELECT * FROM t4 WHERE t4.f>4.0
+[2025-04-01 09:22:46.110599 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 09:22:51.712863 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 10:13:27.885392 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=32): SELECT * FROM t4 WHERE t4.f>4.0
+[2025-04-01 10:13:27.902338 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 11:10:48.292600 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 11:10:58.583333 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=30): SELECT * FROM t4 WHERE t4.f>4
+[2025-04-01 11:10:58.595831 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 11:10:58.600253 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 11:10:58.602825 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 11:10:58.605440 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 11:10:58.607080 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 11:11:13.421229 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=32): SELECT * FROM t4 WHERE t4.f>4.0
+[2025-04-01 11:11:13.431301 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 11:11:23.851784 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 11:12:49.095762 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=30): SELECT * FROM t4 WHERE t4.f>4
+[2025-04-01 11:12:49.104205 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 11:12:49.107072 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 11:14:56.809440 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 11:18:02.380358 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 11:18:16.469204 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 11:18:42.725336 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=30): SELECT * FROM t4 WHERE t4.f>4
+[2025-04-01 11:18:42.738213 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 11:18:42.742484 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 11:18:46.324916 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 11:18:47.334679 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 11:18:47.944739 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 11:18:55.414746 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=30): SELECT * FROM t4 WHERE t4.f>4
+[2025-04-01 11:18:55.427932 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 11:18:55.431856 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 11:19:01.980749 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 11:19:05.921456 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 11:19:14.453697 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 11:24:59.587790 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=32): INSERT INTO t4 VALUES (100, 15)
+[2025-04-01 11:24:59.595547 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 11:24:59.597329 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 2, target 3
+[2025-04-01 11:24:59.600417 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 11:25:08.643897 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=30): SELECT * FROM t4 WHERE t4.f>4
+[2025-04-01 11:25:08.653030 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 11:25:08.657170 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 13:49:35.270580 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 13:49:36.475232 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 13:49:37.069077 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 3, target 2
+[2025-04-01 13:49:37.597945 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:50:46.924850 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=31): create table t6(a int, d date)
+[2025-04-01 13:50:51.272119 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: create@table.cpp:67] >> Begin to create table miniob/db/sys:t6
+[2025-04-01 13:50:51.280918 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: init@field_meta.cpp:57] >> Init a field with name=a
+[2025-04-01 13:50:51.285777 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: init@field_meta.cpp:57] >> Init a field with name=d
+[2025-04-01 13:50:51.287838 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: init@table_meta.cpp:97] >> Sussessfully initialized table meta. table id=9, name=t6
+[2025-04-01 13:50:51.312310 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: create_file@disk_buffer_pool.cpp:837] >> Successfully create miniob/db/sys/t6.data.
+[2025-04-01 13:50:51.314072 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: open_file@disk_buffer_pool.cpp:236] >> Successfully open buffer pool file miniob/db/sys/t6.data.
+[2025-04-01 13:50:51.315748 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: open_file@disk_buffer_pool.cpp:274] >> Successfully open miniob/db/sys/t6.data. file_desc=17, hdr_frame=0xfffff5009f28, file header=pageCount:1, allocatedCount:1
+[2025-04-01 13:50:51.316714 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: init_free_pages@record_manager.cpp:538] >> record file handler init free pages done. free page num=0, rc=SUCCESS
+[2025-04-01 13:50:51.317440 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: init@record_manager.cpp:497] >> open record file handle done. rc=SUCCESS
+[2025-04-01 13:50:51.317738 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: create@table.cpp:126] >> Successfully create table miniob/db/sys:t6
+[2025-04-01 13:50:51.318029 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: create_table@db.cpp:158] >> Create table success. table name=t6, table_id:9
+[2025-04-01 13:50:51.320566 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=t6
+[2025-04-01 13:50:51.321041 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:t6.
+[2025-04-01 13:50:51.323115 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=t4
+[2025-04-01 13:50:51.323548 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:t4.
+[2025-04-01 13:50:51.332804 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=aggregation_func
+[2025-04-01 13:50:51.333275 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:aggregation_func.
+[2025-04-01 13:50:51.370730 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=date_table
+[2025-04-01 13:50:51.370993 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:date_table.
+[2025-04-01 13:50:51.372459 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=nt
+[2025-04-01 13:50:51.372651 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:nt.
+[2025-04-01 13:50:51.374890 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=tasdasda
+[2025-04-01 13:50:51.375185 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:tasdasda.
+[2025-04-01 13:50:51.376568 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=t5
+[2025-04-01 13:50:51.376771 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:t5.
+[2025-04-01 13:50:51.377885 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@table.cpp:565] >> Sync table over. table=t3
+[2025-04-01 13:50:51.378631 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:t3.
+[2025-04-01 13:50:52.492622 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:266] >> double write buffer flush pages ret=SUCCESS
+[2025-04-01 13:50:52.495797 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: flush_meta@db.cpp:399] >> Successfully write db meta file. db=sys, file=miniob/db/sys/sys.db.tmp, check_point_lsn=0
+[2025-04-01 13:50:52.496133 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: sync@db.cpp:285] >> Successfully sync db. db=sys
+[2025-04-01 13:50:52.496428 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: execute@command_executor.cpp:100] >> sync db after ddl. rc=0
+[2025-04-01 13:50:52.499578 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:51:29.403790 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=34): insert into t6 values(1,2019-1-1)
+[2025-04-01 13:51:29.411399 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:51:48.654811 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=35): insert into t6 values (1,2019-1-1)
+[2025-04-01 13:51:48.657376 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:52:20.724059 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=36): INSERT INTO t6 VALUES(1,'2019-1-1')
+[2025-04-01 13:52:20.729712 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 13:52:20.731791 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: allocate_page@disk_buffer_pool.cpp:408] >> allocate new page by extending bufferpool. buffer_pool_id=11, pageNum=1, pin=1
+[2025-04-01 13:52:20.733999 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:52:46.067424 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=37): INSERT INTO t6 VALUES(2,'2035-12-1')
+[2025-04-01 13:52:46.071355 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 13:52:46.072631 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:53:01.062984 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=17): select * from t6
+[2025-04-01 13:53:01.068689 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 13:53:01.076309 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:53:21.584877 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=41): select * from t6 WHERE t6.d='2019-01-01'
+[2025-04-01 13:53:21.595009 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 13:53:21.599591 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:53:40.180768 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=37): INSERT INTO t6 VALUES(2,'2035-13-1')
+[2025-04-01 13:53:40.184211 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: create@insert_stmt.cpp:60] >> not a valid date2035
+[2025-04-01 13:53:40.184475 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: handle_request@resolve_stage.cpp:50] >> failed to create stmt. rc=1:INVALID_ARGUMENT
+[2025-04-01 13:53:40.185084 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:53:50.033244 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=17): select * from t6
+[2025-04-01 13:53:50.039027 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 13:53:50.046325 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:54:41.628202 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=12): show tables
+[2025-04-01 13:54:41.638331 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:55:00.798645 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=5): help
+[2025-04-01 13:55:00.806962 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:55:19.184394 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=21): desc aggreation_func
+[2025-04-01 13:55:19.187776 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: handle_request@resolve_stage.cpp:50] >> failed to create stmt. rc=25:SCHEMA_TABLE_NOT_EXIST
+[2025-04-01 13:55:19.188258 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:55:30.859165 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=22): desc aggregation_func
+[2025-04-01 13:55:30.868794 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:56:12.746863 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=31): select * from aggregation_func
+[2025-04-01 13:56:12.753877 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 13:56:12.764091 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:57:05.353374 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=61): insert into aggregation_func values(100,2,15.3,'2019-11-11')
+[2025-04-01 13:57:05.357643 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: create@insert_stmt.cpp:47] >> schema mismatch. value num=4, field num in schema=5
+[2025-04-01 13:57:05.358072 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: handle_request@resolve_stage.cpp:50] >> failed to create stmt. rc=28:SCHEMA_FIELD_MISSING
+[2025-04-01 13:57:05.358658 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:57:29.610032 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=66): insert into aggregation_func values(100,2,15.3,'ZZ','2019-11-11')
+[2025-04-01 13:57:29.613633 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 13:57:29.614731 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:57:33.607867 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=31): select * from aggregation_func
+[2025-04-01 13:57:33.615337 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 13:57:33.629430 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:58:31.961964 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=82): 
+miniob > SELECT avg(id),max(num),min(addr),count(birthday) FROM aggregation_func
+[2025-04-01 13:58:31.965438 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:59:05.239843 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=82): 
+miniob > SELECT avg(id),max(num),min(addr),count(birthday) FROM aggregation_func
+[2025-04-01 13:59:05.243328 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:59:14.120769 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=31): select * from aggregation_func
+[2025-04-01 13:59:14.128584 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 13:59:14.149420 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:59:31.080693 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=116): miniob > SELECT avg(id),max(num),min(addr),count(birthday) FROM aggregation_func WHERE aggregation_func.price>15.0;
+[2025-04-01 13:59:31.084305 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:59:52.461777 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=77): miniob > SELECT avg(id),max(num),min(addr),count(birthday) FROM aggregation_
+[2025-04-01 13:59:52.464184 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 13:59:57.678021 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=82): miniob > SELECT avg(id),max(num),min(addr),count(birthday) FROM aggregation_func;
+[2025-04-01 13:59:57.681161 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 14:00:15.238481 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=73): SELECT avg(id),max(num),min(addr),count(birthday) FROM aggregation_func;
+[2025-04-01 14:00:15.249896 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 14:00:24.058494 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 14:00:32.043989 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=73): SELECT avg(id),max(num),min(addr),count(birthday) FROM aggregation_func;
+[2025-04-01 14:00:32.067340 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 14:00:38.537357 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 14:02:21.794717 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=72): SELECT avg(id),max(num),min(addr),count(birthday) FROM aggregation_func
+[2025-04-01 14:02:21.815951 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 14:02:21.838405 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 14:02:39.328048 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=73):  SELECT avg(id),max(num),min(addr),count(birthday) FROM aggregation_func
+[2025-04-01 14:02:39.342054 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 14:02:39.367191 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 14:03:29.388061 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=73):  SELECT avg(id),max(num),min(addr),count(birthday) FROM aggregation_func
+[2025-04-01 14:03:29.405464 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 14:03:29.421669 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 14:04:01.799771 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=61): insert into aggregation_func values(100,2,15.3,'2019-11-11')
+[2025-04-01 14:04:01.802839 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: create@insert_stmt.cpp:47] >> schema mismatch. value num=4, field num in schema=5
+[2025-04-01 14:04:01.803574 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: handle_request@resolve_stage.cpp:50] >> failed to create stmt. rc=28:SCHEMA_FIELD_MISSING
+[2025-04-01 14:04:01.804151 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 14:04:33.475970 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=61): insert into aggregation_func values(120,2,14.5,'2019-11-11')
+[2025-04-01 14:04:33.480535 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: create@insert_stmt.cpp:47] >> schema mismatch. value num=4, field num in schema=5
+[2025-04-01 14:04:33.480826 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: handle_request@resolve_stage.cpp:50] >> failed to create stmt. rc=28:SCHEMA_FIELD_MISSING
+[2025-04-01 14:04:33.481269 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 14:04:58.540050 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=66): insert into aggregation_func values(120,2,14.5,'BB','2019-11-11')
+[2025-04-01 14:04:58.545905 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 14:04:58.548472 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 14:05:07.290915 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=73):  SELECT avg(id),max(num),min(addr),count(birthday) FROM aggregation_func
+[2025-04-01 14:05:07.305022 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 14:05:07.324528 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 14:05:35.270978 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=75):  SELECT avg(id),max(price),min(addr),count(birthday) FROM aggregation_func
+[2025-04-01 14:05:35.278663 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 14:05:38.754867 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 14:06:16.534543 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=108):  SELECT avg(id),max(price),min(addr),count(birthday) FROM aggregation_func WHERE arrregation_func.prize>7.0
+[2025-04-01 14:06:16.546199 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: get_table_and_field@filter_stmt.cpp:87] >> No such table: attr.relation_name: arrregation_func
+[2025-04-01 14:06:16.546471 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: create_filter_unit@filter_stmt.cpp:119] >> cannot find attr
+[2025-04-01 14:06:16.546720 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: create@filter_stmt.cpp:63] >> failed to create filter unit. condition index=0
+[2025-04-01 14:06:16.546944 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: create@select_stmt.cpp:99] >> cannot construct filter stmt
+[2025-04-01 14:06:16.547145 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: handle_request@resolve_stage.cpp:50] >> failed to create stmt. rc=25:SCHEMA_TABLE_NOT_EXIST
+[2025-04-01 14:06:16.547492 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 14:06:39.646919 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=107): SELECT avg(id),max(price),min(addr),count(birthday) FROM aggregation_func WHERE arrregation_func.prize>7.0
+[2025-04-01 14:06:39.659187 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: get_table_and_field@filter_stmt.cpp:87] >> No such table: attr.relation_name: arrregation_func
+[2025-04-01 14:06:39.660718 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: create_filter_unit@filter_stmt.cpp:119] >> cannot find attr
+[2025-04-01 14:06:39.661090 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: create@filter_stmt.cpp:63] >> failed to create filter unit. condition index=0
+[2025-04-01 14:06:39.661253 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: create@select_stmt.cpp:99] >> cannot construct filter stmt
+[2025-04-01 14:06:39.661504 pid:61036 tid:fffff2e78100 ctx:503000021f40 WARN: handle_request@resolve_stage.cpp:50] >> failed to create stmt. rc=25:SCHEMA_TABLE_NOT_EXIST
+[2025-04-01 14:06:39.662016 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 14:07:38.646076 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=81): SELECT avg(id),max(price) FROM aggregation_func WHERE aggregation_func.price>7.0
+[2025-04-01 14:07:38.665547 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 14:07:42.264254 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-01 14:08:07.803397 pid:61036 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=31): SELECT * FROM aggregation_func
+[2025-04-01 14:08:07.812486 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-01 14:08:07.829013 pid:61036 tid:fffff2e78100 ctx:503000021f40 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
