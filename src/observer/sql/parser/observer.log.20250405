@@ -1,0 +1,74 @@
+[2025-04-05 08:11:23.887335 pid:1677 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=37): insert into t6 values(2,'2010-12-3')
+[2025-04-05 08:11:23.900112 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-05 08:11:23.903163 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-05 08:11:26.494521 pid:1677 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=17): select * from t6
+[2025-04-05 08:11:26.498574 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-05 08:11:26.500751 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-05 08:11:36.675508 pid:1677 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=30): select * from t6 WHERE t6.a>1
+[2025-04-05 08:11:36.676596 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-05 08:11:36.677333 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-05 08:11:47.995564 pid:1677 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=8): desc t5
+[2025-04-05 08:11:47.997887 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-05 08:11:54.480389 pid:1677 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=8): desc t4
+[2025-04-05 08:11:54.481725 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-05 08:12:09.663457 pid:1677 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=17): select * from t4
+[2025-04-05 08:12:09.664382 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-05 08:12:09.666174 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-05 08:12:44.994008 pid:1677 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=30): create table float (f float);
+[2025-04-05 08:12:44.995171 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-05 08:12:58.576060 pid:1677 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=29): create table float(f float);
+[2025-04-05 08:12:58.577487 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-05 08:13:06.641121 pid:1677 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=5): help
+[2025-04-05 08:13:06.641980 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-05 08:13:31.034716 pid:1677 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=30): create table float(f floats);
+[2025-04-05 08:13:31.035661 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-05 08:13:39.718223 pid:1677 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=29): create table float (f float)
+[2025-04-05 08:13:39.718925 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-05 08:13:44.734745 pid:1677 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=26): create table fl (f float)
+[2025-04-05 08:13:53.320528 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: create@table.cpp:67] >> Begin to create table miniob/db/sys:fl
+[2025-04-05 08:13:53.322954 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: init@field_meta.cpp:57] >> Init a field with name=f
+[2025-04-05 08:13:53.323196 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: init@table_meta.cpp:97] >> Sussessfully initialized table meta. table id=10, name=fl
+[2025-04-05 08:13:53.325457 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: create_file@disk_buffer_pool.cpp:837] >> Successfully create miniob/db/sys/fl.data.
+[2025-04-05 08:13:53.326307 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: open_file@disk_buffer_pool.cpp:236] >> Successfully open buffer pool file miniob/db/sys/fl.data.
+[2025-04-05 08:13:53.326883 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: open_file@disk_buffer_pool.cpp:274] >> Successfully open miniob/db/sys/fl.data. file_desc=16, hdr_frame=0xfffff500e058, file header=pageCount:1, allocatedCount:1
+[2025-04-05 08:13:53.327230 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: init_free_pages@record_manager.cpp:538] >> record file handler init free pages done. free page num=0, rc=SUCCESS
+[2025-04-05 08:13:53.327356 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: init@record_manager.cpp:497] >> open record file handle done. rc=SUCCESS
+[2025-04-05 08:13:53.327404 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: create@table.cpp:126] >> Successfully create table miniob/db/sys:fl
+[2025-04-05 08:13:53.327491 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: create_table@db.cpp:158] >> Create table success. table name=fl, table_id:10
+[2025-04-05 08:13:53.328750 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@table.cpp:565] >> Sync table over. table=fl
+[2025-04-05 08:13:53.328792 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:fl.
+[2025-04-05 08:13:53.329096 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@table.cpp:565] >> Sync table over. table=t6
+[2025-04-05 08:13:53.329128 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:t6.
+[2025-04-05 08:13:53.329996 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@table.cpp:565] >> Sync table over. table=t4
+[2025-04-05 08:13:53.330043 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:t4.
+[2025-04-05 08:13:53.331071 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@table.cpp:565] >> Sync table over. table=aggregation_func
+[2025-04-05 08:13:53.331122 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:aggregation_func.
+[2025-04-05 08:13:53.332686 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@table.cpp:565] >> Sync table over. table=date_table
+[2025-04-05 08:13:53.332728 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:date_table.
+[2025-04-05 08:13:53.332871 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@table.cpp:565] >> Sync table over. table=nt
+[2025-04-05 08:13:53.332907 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:nt.
+[2025-04-05 08:13:53.333368 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@table.cpp:565] >> Sync table over. table=tasdasda
+[2025-04-05 08:13:53.333411 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:tasdasda.
+[2025-04-05 08:13:53.333561 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@table.cpp:565] >> Sync table over. table=t5
+[2025-04-05 08:13:53.333599 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:t5.
+[2025-04-05 08:13:53.333861 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@table.cpp:565] >> Sync table over. table=t3
+[2025-04-05 08:13:53.333966 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@db.cpp:261] >> Successfully sync table db:sys, table:t3.
+[2025-04-05 08:13:55.074237 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@db.cpp:266] >> double write buffer flush pages ret=SUCCESS
+[2025-04-05 08:13:55.076837 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: flush_meta@db.cpp:399] >> Successfully write db meta file. db=sys, file=miniob/db/sys/sys.db.tmp, check_point_lsn=0
+[2025-04-05 08:13:55.076943 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: sync@db.cpp:285] >> Successfully sync db. db=sys
+[2025-04-05 08:13:55.077112 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: execute@command_executor.cpp:100] >> sync db after ddl. rc=0
+[2025-04-05 08:13:55.078727 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-05 08:15:23.007961 pid:1677 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=30): insert into t4 values(1,12.0)
+[2025-04-05 08:27:54.578352 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-05 08:27:54.586064 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-05 08:28:02.461733 pid:1677 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=28): insert into t4 values(1,12)
+[2025-04-05 08:37:24.522801 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-05 08:37:24.524778 pid:1677 tid:fffff2e78100 ctx:503000022e10 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 2, target 3
+[2025-04-05 08:37:24.529246 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-05 08:37:37.512032 pid:1677 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=28): insert into t4 values(1,14)
+[2025-04-05 08:37:41.167487 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-05 08:37:41.168387 pid:1677 tid:fffff2e78100 ctx:503000022e10 WARN: cast_to@data_type.cpp:29] >> 使用直接转换的cast_to, source 2, target 3
+[2025-04-05 08:37:41.169334 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-04-05 08:38:01.939113 pid:1677 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=17): select * from t4
+[2025-04-05 08:38:01.942743 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
+[2025-04-05 08:38:01.945793 pid:1677 tid:fffff2e78100 ctx:503000022e10 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
