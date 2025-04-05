@@ -21,7 +21,7 @@ InsertStmt::InsertStmt(Table *table, const Value *values, int value_amount)
     : table_(table), values_(values), value_amount_(value_amount)
 {}
 
-RC InsertStmt::create(Db *db, const InsertSqlNode &inserts, Stmt *&stmt)
+RC InsertStmt::create(Db *db,  InsertSqlNode &inserts, Stmt *&stmt)
 {
   const char *table_name = inserts.relation_name.c_str();
   if (nullptr == db || nullptr == table_name || inserts.values.empty()) {
@@ -39,7 +39,7 @@ RC InsertStmt::create(Db *db, const InsertSqlNode &inserts, Stmt *&stmt)
  
 
   // check the fields number
-  const Value     *values     = inserts.values.data();
+  Value     *values     = inserts.values.data();
   const int        value_num  = static_cast<int>(inserts.values.size());
   const TableMeta &table_meta = table->table_meta();
   const int        field_num  = table_meta.field_num() - table_meta.sys_field_num();
@@ -53,6 +53,17 @@ RC InsertStmt::create(Db *db, const InsertSqlNode &inserts, Stmt *&stmt)
   for (int i=0;i<filed_metas->size();i++) {
     auto &filed = (*filed_metas)[i];
     auto &value = values[i];
+    if ( values[i].attr_type() != filed.type()) {
+      // 类型不匹配时尝试转型，chars 可以转成 text
+      Value to_value;
+      RC    rc = Value::cast_to(values[i], filed.type(), to_value);
+      if (OB_FAIL(rc)) {
+        LOG_WARN("value doesn't match: %s != %s", attr_type_to_string(values[i].attr_type()), attr_type_to_string(filed.type()));
+        return RC::SCHEMA_FIELD_TYPE_MISMATCH;
+      }
+      values[i] = to_value;
+    }
+    
     switch (filed.type())
     {
       case AttrType::DATES: {
@@ -70,3 +81,4 @@ RC InsertStmt::create(Db *db, const InsertSqlNode &inserts, Stmt *&stmt)
   stmt = new InsertStmt(table, values, value_num);
   return RC::SUCCESS;
 }
+
