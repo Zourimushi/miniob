@@ -35,6 +35,18 @@ RC CharType::cast_to(const Value &val, AttrType type, Value &result) const
       string data = val.get_string();
       DataType::type_instance(val.attr_type())->set_value_from_str(tmp, data);
     } break;
+    case AttrType::INTS: {
+      int to = int(common::db_str_to_float(val.value_.pointer_value_));
+      result.set_int(to);
+      break;
+    }
+    case AttrType::FLOATS: {
+      float to = common::db_str_to_float(val.value_.pointer_value_);
+      result.set_float(to);
+      break;
+    }
+    
+    
     default: return RC::UNIMPLEMENTED;
   }
   return RC::SUCCESS;
