@@ -74,6 +74,11 @@ struct ConditionSqlNode
   Value          right_value;    ///< right-hand side value if right_is_attr = FALSE
 };
 
+struct JoinSqlNode
+{
+  string relation;
+  vector<ConditionSqlNode>       conditions;   ///< 查询条件，使用AND串联起来多个条件
+};
 /**
  * @brief 描述一个select语句
  * @ingroup SQLParser
@@ -90,7 +95,9 @@ struct SelectSqlNode
   vector<unique_ptr<Expression>> expressions;  ///< 查询的表达式
   vector<string>                 relations;    ///< 查询的表
   vector<ConditionSqlNode>       conditions;   ///< 查询条件，使用AND串联起来多个条件
+  vector<JoinSqlNode> joins;     ///< group by clause
   vector<unique_ptr<Expression>> group_by;     ///< group by clause
+  vector<unique_ptr<Expression>> order_by;     ///< order by clause
 };
 
 /**

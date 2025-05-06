@@ -43,6 +43,17 @@ RC SelectStmt::create(Db *db, SelectSqlNode &select_sql, Stmt *&stmt)
   // collect tables in `from` statement
   vector<Table *>                tables;
   unordered_map<string, Table *> table_map;
+  // 插入join内容到relation与conditions中
+  vector<JoinSqlNode> &joins = select_sql.joins;
+  for (auto &join_node : joins) {
+    select_sql.relations.emplace_back(std::move(join_node.relation));
+    for (auto &condition : join_node.conditions) {
+      select_sql.conditions.emplace_back(std::move(condition));
+    }
+  }
+
+
+
   for (size_t i = 0; i < select_sql.relations.size(); i++) {
     const char *table_name = select_sql.relations[i].c_str();
     if (nullptr == table_name) {

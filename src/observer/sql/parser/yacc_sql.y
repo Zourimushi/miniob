@@ -85,6 +85,7 @@ UnboundAggregateExpr *create_aggregate_expression(const char *aggregate_name,
         TRX_BEGIN
         TRX_COMMIT
         TRX_ROLLBACK
+        INNER_JOIN
         INT_T
         DATE_T
         STRING_T
@@ -126,6 +127,7 @@ UnboundAggregateExpr *create_aggregate_expression(const char *aggregate_name,
   vector<unique_ptr<Expression>> * expression_list;
   vector<Value> *                       value_list;
   vector<ConditionSqlNode> *            condition_list;
+  vector<JoinSqlNode> *                 join_list;
   vector<RelAttrSqlNode> *              rel_attr_list;
   vector<string> *                 relation_list;
   char *                                     cstring;
@@ -160,6 +162,8 @@ UnboundAggregateExpr *create_aggregate_expression(const char *aggregate_name,
 %type <expression>          expression
 %type <expression_list>     expression_list
 %type <expression_list>     group_by
+
+%type <join_list>           join_list
 %type <sql_node>            calc_stmt
 %type <sql_node>            select_stmt
 %type <sql_node>            insert_stmt
@@ -448,7 +452,7 @@ update_stmt:      /*  update 语句的语法解析树*/
     }
     ;
 select_stmt:        /*  select 语句的语法解析树*/
-    SELECT expression_list FROM rel_list where group_by
+    SELECT expression_list FROM rel_list join_list where group_by 
     {
       $$ = new ParsedSqlNode(SCF_SELECT);
       if ($2 != nullptr) {
@@ -462,14 +466,21 @@ select_stmt:        /*  select 语句的语法解析树*/
       }
 
       if ($5 != nullptr) {
-        $$->selection.conditions.swap(*$5);
+        $$->selection.joins.swap(*$5);
         delete $5;
       }
 
       if ($6 != nullptr) {
-        $$->selection.group_by.swap(*$6);
+        $$->selection.conditions.swap(*$6);
         delete $6;
       }
+      if ($7 != nullptr) {
+
+        $$->selection.group_by.swap(*$7);
+        delete $7;
+
+      }
+
     }
     ;
 calc_stmt:
@@ -478,6 +489,24 @@ calc_stmt:
       $$ = new ParsedSqlNode(SCF_CALC);
       $$->calc.expressions.swap(*$2);
       delete $2;
+    }
+    ;
+join_list:
+    /* empty */
+    {
+      $$ = nullptr;
+    }
+    | INNER_JOIN relation ON condition_list join_list {
+      if ($5 != nullptr) {
+        $$ = $5;
+      } else {
+        $$ = new std::vector<JoinSqlNode>;
+      }
+      JoinSqlNode join_node;
+      join_node.relation = $2;
+      join_node.conditions.swap(*$4);
+      //保持和输入一致的顺序
+      $$->emplace($$->begin(), std::move(join_node));
     }
     ;
 
