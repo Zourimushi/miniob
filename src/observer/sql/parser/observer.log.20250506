@@ -1436,3 +1436,7 @@ Finish dump configuration
 [2025-05-06 18:07:19.739083 pid:51872 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:89] >> receive command(size=126):  Select * from join_table_4 inner join join_table_5 on join_table_4.id=join_table_5.id and join_table_5.f<join_table_4.name ;
 [2025-05-06 18:07:22.478035 pid:51872 tid:fffff2e78100 ctx:503000024c70 INFO: generate_physical_plan@optimize_stage.cpp:84] >> use tuple iterator
 [2025-05-06 18:07:22.481092 pid:51872 tid:fffff2e78100 ctx:503000024c70 INFO: handle_event@sql_task_handler.cpp:46] >> write result return SUCCESS
+[2025-05-06 18:17:46.616329 pid:51872 tid:fffff2e78100 ctx:0 INFO: read_event@plain_communicator.cpp:82] >> The peer has been closed 127.0.0.1:40132
+[2025-05-06 18:17:46.618866 pid:51872 tid:fffff2e78100 ctx:0 ERROR: operator()@one_thread_per_connection_thread_handler.cpp:98] >> handle error. rc = IOERR_CLOSE
+[2025-05-06 18:17:46.620358 pid:51872 tid:fffff2e78100 ctx:0 INFO: operator()@one_thread_per_connection_thread_handler.cpp:103] >> worker thread stop. communicator = 0x50b000001b10
+[2025-05-06 18:17:46.622861 pid:51872 tid:fffff2e78100 ctx:0 INFO: close_connection@one_thread_per_connection_thread_handler.cpp:154] >> close connection. communicator = 0x50b000001b10
