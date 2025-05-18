@@ -26,6 +26,8 @@ See the Mulan PSL v2 for more details. */
 #include "sql/operator/project_logical_operator.h"
 #include "sql/operator/table_get_logical_operator.h"
 #include "sql/operator/group_by_logical_operator.h"
+#include "sql/operator/order_by_logical_operator.h"
+
 
 #include "sql/stmt/calc_stmt.h"
 #include "sql/stmt/delete_stmt.h"
@@ -137,6 +139,20 @@ RC LogicalPlanGenerator::create_plan(SelectStmt *select_stmt, unique_ptr<Logical
 
     last_oper = &group_by_oper;
   }
+  
+  unique_ptr<LogicalOperator> order_by_oper;
+  if (!select_stmt->order_by().empty()) {
+    order_by_oper = make_unique<OrderByLogicalOperator>(tables[0], std::move(select_stmt->order_by()));
+  }
+
+  if (order_by_oper) {
+    if (*last_oper) {
+      order_by_oper->add_child(std::move(*last_oper));
+    }
+
+    last_oper = &order_by_oper;
+  }
+
 
   auto project_oper = make_unique<ProjectLogicalOperator>(std::move(select_stmt->query_expressions()));
   if (*last_oper) {
@@ -316,7 +332,7 @@ RC LogicalPlanGenerator::create_group_by_plan(SelectStmt *select_stmt, unique_pt
       // do nothing
     } else if (expr->pos() != -1) {
       // do nothing
-    } else if (expr->type() == ExprType::FIELD) {
+    } else if (expr->type() == ExprType::UNBOUND_FIELD || expr->type() == ExprType::UNBOUND_AGGREGATION) {
       found_unbound_column = true;
     }else {
       rc = ExpressionIterator::iterate_child_expr(*expr, find_unbound_column);

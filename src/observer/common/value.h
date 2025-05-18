@@ -95,6 +95,8 @@ public:
   void set_data(const char *data, int length) { this->set_data(const_cast<char *>(data), length); }
   void set_value(const Value &value);
   void set_boolean(bool val);
+  void set_null(bool is_null);
+
 
   string to_string() const;
 
@@ -124,9 +126,12 @@ private:
   void set_date(Date val);
   void set_string_from_other(const Value &other);
 
+
 private:
   AttrType attr_type_ = AttrType::UNDEFINED;
   int      length_    = 0;
+    bool     is_null_   = false;
+
 
   union Val
   {

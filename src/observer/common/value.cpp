@@ -374,3 +374,15 @@ bool Value::get_boolean() const
   }
   return false;
 }
+
+void Value::set_null(bool is_null)
+{
+  AttrType attr_type = attr_type_;
+  bool own_data      = own_data_;
+  if(is_null) {
+    reset();
+    attr_type_ = attr_type;
+    own_data_  = own_data;
+  }
+  is_null_ = is_null;
+}

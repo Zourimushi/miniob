@@ -67,6 +67,8 @@ UnboundAggregateExpr *create_aggregate_expression(const char *aggregate_name,
         BY
         CREATE
         DROP
+        ORDER
+        ASC
         GROUP
         TABLE
         TABLES
@@ -162,6 +164,9 @@ UnboundAggregateExpr *create_aggregate_expression(const char *aggregate_name,
 %type <expression>          expression
 %type <expression_list>     expression_list
 %type <expression_list>     group_by
+%type <expression_list>     order_by
+%type <expression_list>     order_by_list
+%type <number>              order_by_flag
 
 %type <join_list>           join_list
 %type <sql_node>            calc_stmt
@@ -452,7 +457,7 @@ update_stmt:      /*  update 语句的语法解析树*/
     }
     ;
 select_stmt:        /*  select 语句的语法解析树*/
-    SELECT expression_list FROM rel_list join_list where group_by 
+    SELECT expression_list FROM rel_list join_list where group_by  order_by
     {
       $$ = new ParsedSqlNode(SCF_SELECT);
       if ($2 != nullptr) {
@@ -480,6 +485,10 @@ select_stmt:        /*  select 语句的语法解析树*/
         delete $7;
 
       }
+      if ($8 != nullptr) {
+        $$->selection.order_by.swap(*$8);
+        delete $8;
+      }
 
     }
     ;
@@ -491,6 +500,49 @@ calc_stmt:
       delete $2;
     }
     ;
+    order_by:
+    /* empty */
+    {
+      $$ = nullptr;
+    }
+    | ORDER BY order_by_list
+    {
+      $$ = $3;
+    }
+    ;
+
+order_by_list:
+    expression order_by_flag
+    {
+      $$ = new vector<unique_ptr<Expression>>;
+      $$->emplace_back(new UnboundOrderExpr($1, $2));
+    }
+    | expression order_by_flag COMMA order_by_list
+    {
+      if ($4 != nullptr) {
+        $$ = $4;
+      } else {
+        $$ = new vector<unique_ptr<Expression>>;
+      }
+      $$->emplace_back(std::make_unique<UnboundOrderExpr>($1, $2));
+      // 此处不需要插入到前面，因为通过不断的order来排序的话，要求倒序
+    }
+    ;
+
+order_by_flag:
+    {
+      $$ = 1;
+    }
+    | ASC
+    {
+      $$ = 1;
+    }
+    | DESC
+    {
+      $$ = -1;
+    }
+    ;
+
 join_list:
     /* empty */
     {
@@ -703,6 +755,12 @@ group_by:
     /* empty */
     {
       $$ = nullptr;
+    }
+    | GROUP BY expression_list
+    {
+      $$ = new vector<std::unique_ptr<Expression>>;
+      $$->swap(*$3);
+      delete $3;
     }
     ;
 load_data_stmt:

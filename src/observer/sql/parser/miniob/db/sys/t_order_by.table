@@ -1,0 +1,33 @@
+{
+	"fields" : 
+	[
+		{
+			"FIELD_id" : 0,
+			"len" : 4,
+			"name" : "id",
+			"offset" : 0,
+			"type" : "ints",
+			"visible" : true
+		},
+		{
+			"FIELD_id" : 1,
+			"len" : 4,
+			"name" : "score",
+			"offset" : 4,
+			"type" : "floats",
+			"visible" : true
+		},
+		{
+			"FIELD_id" : 2,
+			"len" : 4,
+			"name" : "name",
+			"offset" : 8,
+			"type" : "chars",
+			"visible" : true
+		}
+	],
+	"indexes" : null,
+	"storage_format" : 1,
+	"table_id" : 17,
+	"table_name" : "t_order_by"
+}

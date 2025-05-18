@@ -38,6 +38,8 @@ enum class ExprType
   STAR,                 ///< 星号，表示所有字段
   UNBOUND_FIELD,        ///< 未绑定的字段，需要在resolver阶段解析为FieldExpr
   UNBOUND_AGGREGATION,  ///< 未绑定的聚合函数，需要在resolver阶段解析为AggregateExpr
+  UNBOUND_ORDER,     ///< 未绑定的排序字段，需要在resolver阶段解析为OrderExpr
+
 
   FIELD,        ///< 字段。在实际执行时，根据行数据内容提取对应字段的值
   VALUE,        ///< 常量值
@@ -46,6 +48,7 @@ enum class ExprType
   CONJUNCTION,  ///< 多个表达式使用同一种关系(AND或OR)来联结
   ARITHMETIC,   ///< 算术运算
   AGGREGATION,  ///< 聚合运算
+  ORDER,        ///< 排序
 };
 
 /**
@@ -155,6 +158,7 @@ private:
 class UnboundFieldExpr : public Expression
 {
 public:
+  UnboundFieldExpr() = default;
   UnboundFieldExpr(const string &table_name, const string &field_name)
       : table_name_(table_name), field_name_(field_name)
   {}
@@ -467,4 +471,48 @@ public:
 private:
   Type                   aggregate_type_;
   unique_ptr<Expression> child_;
+};
+
+class UnboundOrderExpr : public Expression
+{
+public:
+  UnboundOrderExpr(Expression *field_expr, int order)
+  : field_expr_(field_expr), order_(order) {}
+  virtual ~UnboundOrderExpr() = default;
+
+  ExprType type() const override { return ExprType::UNBOUND_ORDER; }
+
+  AttrType value_type() const override { return field_expr_->value_type(); }
+
+  RC get_value(const Tuple &tuple, Value &value) const override { return RC::INTERNAL; }
+
+  unique_ptr<Expression> &field_expr() { return field_expr_; }
+  
+  int order() const { return order_; }
+
+private:
+  unique_ptr<Expression> field_expr_;
+  int order_;
+};
+
+class OrderExpr : public Expression
+{
+public:
+  OrderExpr(const Table *table, const FieldMeta *field, int order) : field_(table, field), order_(order) {}
+
+  virtual ~OrderExpr() = default;
+  
+  ExprType type() const override { return ExprType::ORDER; }
+
+  AttrType value_type() const override { return field_.attr_type(); }
+  
+  RC get_value(const Tuple &tuple, Value &value) const override { return RC::INTERNAL; }
+
+  const Field &field() const { return field_; }
+
+  int order() const { return order_; }
+
+private:
+  Field field_;
+  int order_;
 };

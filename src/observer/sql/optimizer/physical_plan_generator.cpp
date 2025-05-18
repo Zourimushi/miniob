@@ -41,6 +41,9 @@ See the Mulan PSL v2 for more details. */
 #include "sql/operator/scalar_group_by_physical_operator.h"
 #include "sql/operator/table_scan_vec_physical_operator.h"
 #include "sql/optimizer/physical_plan_generator.h"
+#include "sql/operator/order_by_logical_operator.h"
+#include "sql/operator/order_by_physical_operator.h"
+using namespace common;
 
 using namespace std;
 
@@ -83,6 +86,10 @@ RC PhysicalPlanGenerator::create(LogicalOperator &logical_operator, unique_ptr<P
 
     case LogicalOperatorType::GROUP_BY: {
       return create_plan(static_cast<GroupByLogicalOperator &>(logical_operator), oper);
+    } break;
+
+    case LogicalOperatorType::ORDER_BY: {
+      return create_plan(static_cast<OrderByLogicalOperator &>(logical_operator), oper);
     } break;
 
     default: {
@@ -400,6 +407,43 @@ RC PhysicalPlanGenerator::create_vec_plan(GroupByLogicalOperator &logical_oper, 
   oper = std::move(physical_oper);
   return rc;
 
+  return RC::SUCCESS;
+}
+
+RC PhysicalPlanGenerator::create_plan(OrderByLogicalOperator &order_oper, unique_ptr<PhysicalOperator> &oper)
+{
+  vector<unique_ptr<LogicalOperator>> &child_opers = order_oper.children();
+  unique_ptr<PhysicalOperator> child_physical_oper;
+  RC rc = RC::SUCCESS;
+
+  // get children physical operator of update operator
+  if (!child_opers.empty()) {
+    LogicalOperator *child_oper = child_opers.front().get();
+    rc = create(*child_oper, child_physical_oper);
+    if (rc != RC::SUCCESS) {
+      LOG_WARN("failed to create physical operator. rc=%s", strrc(rc));
+      return rc;
+    }
+  }
+  
+  auto &order_exprs = order_oper.order_by_expressions();
+  unique_ptr<OrderByPhysicalOperator> last_order_oper = nullptr;
+  for (auto &expr: order_exprs) {
+    auto order_expr = static_cast<OrderExpr *>(expr.get());
+    auto order_physical_oper = make_unique<OrderByPhysicalOperator>(order_oper.table(), order_expr->field(), order_expr->order());
+    if(last_order_oper == nullptr) {
+      last_order_oper = std::move(order_physical_oper);
+      if (child_physical_oper) {
+        last_order_oper->add_child(std::move(child_physical_oper));
+      }
+    } else {
+      order_physical_oper->add_child(std::move(last_order_oper));
+      last_order_oper = std::move(order_physical_oper);
+    }
+  }
+
+  oper = std::move(last_order_oper);
+  
   return RC::SUCCESS;
 }
 
