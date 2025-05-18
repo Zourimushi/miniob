@@ -142,7 +142,7 @@ RC LogicalPlanGenerator::create_plan(SelectStmt *select_stmt, unique_ptr<Logical
   
   unique_ptr<LogicalOperator> order_by_oper;
   if (!select_stmt->order_by().empty()) {
-    order_by_oper = make_unique<OrderByLogicalOperator>(tables[0], std::move(select_stmt->order_by()));
+    order_by_oper = make_unique<OrderByLogicalOperator>(std::move(select_stmt->order_by()));
   }
 
   if (order_by_oper) {

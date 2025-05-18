@@ -91,6 +91,10 @@ public:
    * @param[out] cell 返回的cell
    */
   virtual RC find_cell(const TupleCellSpec &spec, Value &cell) const = 0;
+  virtual Tuple *clone() {
+    LOG_WARN("clone is not implemented");
+    return nullptr;
+  }
 
   virtual string to_string() const
   {
@@ -225,6 +229,16 @@ public:
     return RC::NOTFOUND;
   }
 
+    Tuple *clone() override {
+    RowTuple *tuple = new RowTuple();
+    tuple->record_ = new Record();
+    tuple->record_->copy_data(record_->data(), record_->len());
+    tuple->table_  = table_;
+    for (FieldExpr *spec : speces_) {
+      tuple->speces_.push_back(new FieldExpr(spec->field()));
+    }
+    return tuple;
+  }
 #if 0
   RC cell_spec_at(int index, const TupleCellSpec *&spec) const override
   {
@@ -287,7 +301,10 @@ public:
   }
 
   RC find_cell(const TupleCellSpec &spec, Value &cell) const override { return tuple_->find_cell(spec, cell); }
-
+  Tuple *clone() override {
+    LOG_WARN("ProjectTuple::get_new() is not implemented");
+    return nullptr;
+  }
 #if 0
   RC cell_spec_at(int index, const TupleCellSpec *&spec) const override
   {
@@ -297,6 +314,7 @@ public:
     spec = speces_[index];
     return RC::SUCCESS;
   }
+
 #endif
 private:
   vector<unique_ptr<Expression>> expressions_;
@@ -374,6 +392,13 @@ public:
     }
     return RC::SUCCESS;
   }
+    Tuple *clone() override {
+    ValueListTuple *value_list = new ValueListTuple();
+    value_list->cells_ = cells_;
+    value_list->specs_ = specs_;
+    return value_list;
+  }
+
 
 private:
   vector<Value>         cells_;
@@ -434,7 +459,12 @@ public:
 
     return right_->find_cell(spec, value);
   }
-
+  Tuple *clone() override {
+    JoinedTuple *joined_tuple = new JoinedTuple();
+    joined_tuple->left_  = left_->clone();
+    joined_tuple->right_ = right_->clone();
+    return joined_tuple;
+  }
 private:
   Tuple *left_  = nullptr;
   Tuple *right_ = nullptr;

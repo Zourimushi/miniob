@@ -430,7 +430,7 @@ RC PhysicalPlanGenerator::create_plan(OrderByLogicalOperator &order_oper, unique
   unique_ptr<OrderByPhysicalOperator> last_order_oper = nullptr;
   for (auto &expr: order_exprs) {
     auto order_expr = static_cast<OrderExpr *>(expr.get());
-    auto order_physical_oper = make_unique<OrderByPhysicalOperator>(order_oper.table(), order_expr->field(), order_expr->order());
+    auto order_physical_oper = make_unique<OrderByPhysicalOperator>(order_expr->field(), order_expr->order());
     if(last_order_oper == nullptr) {
       last_order_oper = std::move(order_physical_oper);
       if (child_physical_oper) {
